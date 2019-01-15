@@ -1,0 +1,31 @@
+// Bit Slicing on image "test.jpg" //
+
+clc; clear; close all;
+img = rgb2gray(imread('test.jpg'));
+subplot(3,3,1);
+imshow(img);
+img_d = double(img);
+x0 = mod(img_d,2);
+subplot(3,3,2);
+imshow(x0);
+x1 = mod(floor(img_d/2),2);
+subplot(3,3,3);
+imshow(x1);
+x2 = mod(floor(img_d/4),2);
+subplot(3,3,4);
+imshow(x2);
+x3 = mod(floor(img_d/8),2);
+subplot(3,3,5);
+imshow(x3);
+x4 = mod(floor(img_d/16),2);
+subplot(3,3,6);
+imshow(x4);
+x5 = mod(floor(img_d/32),2);
+subplot(3,3,7);
+imshow(x5);
+x6 = mod(floor(img_d/64),2);
+subplot(3,3,8);
+imshow(x6);
+x7 = mod(floor(img_d/128),2);
+subplot(3,3,9);
+imshow(x7);
