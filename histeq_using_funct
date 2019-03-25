@@ -1,0 +1,12 @@
+img = imread('filename.png'); % Read image
+just_gray = rgb2gray(img);
+figure(1)
+subplot(2,2,1)
+imhist(just_gray);
+title('histogram original')
+histeq_d=histeq(just_gray);
+subplot(2,2,2)
+imhist(just_gray);
+title('histogram equilized')
+subplot(2,2,3), imshow(just_gray), title('Original image')
+subplot(2,2,4), imshow(histeq_d), title('Histogram eq')
